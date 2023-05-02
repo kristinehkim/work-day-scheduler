@@ -1,9 +1,10 @@
 // Wrap all code that interacts with the DOM in a call to jQuery to ensure that
 // the code isn't run until the browser has finished rendering all the elements
 // in the html.
+let currentDay = dayjs().format('dddd, MMMM D');
+
 $(document).ready(function () {
 
-  let currentDay = dayjs().format('dddd, MMMM D');
   $('#currentDay').text(currentDay);
   // $('#9').children('textarea').val(localStorage.getItem('9'))
   // $('#10').children('textarea').val(localStorage.getItem('10'))
@@ -14,20 +15,40 @@ $(document).ready(function () {
     let storedEntry = localStorage.getItem(id);//getting the id from localStorage and saving it as a variable
     $(this).children('textarea').val(storedEntry);//grabbing the textarea value(key) and storedEntry(value) from localStorage from each time-block so everything can stay on the page when it refreshes
   })
-//get the hour dayjs if data-hour is < current hour addClass past
-  function getScheduleTime() {
-if (dayjs().format('h:mm A') < data-hour)
-  }
-  
+
+  $('.time-block').each(function (element) {
+    let id = $(this).attr('id');
+    let currentTime = dayjs().format('h:mm A');
+    let timeBlockPresent = $('.time-block');
+    let timeBlockFuture = $('.time-block');
+    let timeBlockPast = $('.time-block');
+    if (currentTime == id) {
+      timeBlockPresent.addClass('present');
+      timeBlockPresent.css('background-color', '#ff6961');
+    } else if (currentTime < id) {
+      timeBlockFuture.addClass('future');
+      timeBlockFuture.css('background-color', '#77dd77');
+    } else (currentTime > id) 
+      timeBlockPast.addClass('past');
+      timeBlockPast.css('background-color', '#d3d3d3');
+  })
+  //get the hour dayjs if data-hour is < current hour addClass past
+  //   function getScheduleTime(element) {
+  // if (dayjs().format('h:mm A') < blockTime) {
+  //   let timeBlockFuture = $('.time-block');
+  //   timeBlockFuture.addClass('future');
+  //   timeBlockFuture.css('background-color', '#77dd77');
+  // }
+  //   } 
+
   // let timeBlockPast = $('.time-block');
   // timeBlockPast.addClass('past');
   // timeBlockPast.css('background-color', '#d3d3d3');
   // let timeBlockPresent = $('.time-block');
   // timeBlockPresent.addClass('present');
   // timeBlockPresent.css('background-color', '#ff6961');
-  // let timeBlockFuture = $('.time-block');
-  // timeBlockFuture.addClass('future');
-  // timeBlockFuture.css('background-color', '#77dd77');
+
+
 
 
   // TODO: Add a listener for click events on the save button. This code should
