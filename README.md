@@ -1,10 +1,9 @@
-# work-day-scheduler# Project Name
-> Outline a brief description of your project.
-> Live demo [_here_](https://www.example.com). <!-- If you have the project hosted somewhere, include the link here. -->
+# Work Day Scheduler
+> This is a simple daily calendar application that allows users to save events for each hour of the day.
+> Live demo [_here_](https://kristinehkim.github.io/work-day-scheduler/). <!-- If you have the project hosted somewhere, include the link here. -->
 
 ## Table of Contents
 * [General Info](#general-information)
-* [Technologies Used](#technologies-used)
 * [Features](#features)
 * [Screenshots](#screenshots)
 * [Setup](#setup)
@@ -17,69 +16,47 @@
 
 
 ## General Information
-- Provide general information about your project here.
-- What problem does it (intend to) solve?
-- What is the purpose of your project?
-- Why did you undertake it?
+This app runs in the browser and features dynamically updated HTML and CSS powered by jQuery.  The Day.js library is used for date and time in this app.  The current day is displayed at the top of the daily planner.  There are timeblocks for each hour of standard business day (9am-5pm).  Each timeblock is color coded to indicate the past hours in gray, the present hour in red, and future hours in green.  When the used clicks in a timeblock, the user can type in an event and click the save button for that timeblock.  When the user refreshes the page, the events persist.
 <!-- You don't have to answer all the questions - just the ones relevant to your project. -->
 
 
-## Technologies Used
-- Tech 1 - version 1.0
-- Tech 2 - version 2.0
-- Tech 3 - version 3.0
-
-
 ## Features
-List the ready features here:
-- Awesome feature 1
-- Awesome feature 2
-- Awesome feature 3
+- Current date always displayed at the top of the calendar
+- Text for each event saved in localStorage
+- Color coded timeblocks displaying past, present, or future hours
+- Colors will adjust as the day progresses
 
 
 ## Screenshots
-![Example screenshot](./img/screenshot.png)
+![Example screenshot](./assets/images/scheduler.png)
 <!-- If you have screenshots you'd like to share, include them here. -->
 
 
 ## Setup
-What are the project requirements/dependencies? Where are they listed? A requirements.txt or a Pipfile.lock file perhaps? Where is it located?
-
-Proceed to describe how to install / setup one's local environment / get started with the project.
+The app is run using Bootstrap, jQuery, and Day.js.  There are a lot of notes commented out so I or anyone else can go back to this code and deeply understand what is going on.
 
 
 ## Usage
-How does one go about using it?
-Provide various use cases and code examples here.
-
-`write-your-code-here`
+The user can type in each timeblock and click the save button for the corresponding block.  It will save even when the page is refreshed and can be edited.
 
 
 ## Project Status
-Project is: _in progress_ / _complete_ / _no longer being worked on_. If you are no longer working on it, provide reasons why.
+Project is: _in progress_ 
 
 
 ## Room for Improvement
 Include areas you believe need improvement / could be improved. Also add TODOs for future development.
 
 Room for improvement:
-- Improvement to be done 1
-- Improvement to be done 2
-
-To do:
-- Feature to be added 1
-- Feature to be added 2
+- To update color coded blocks by the hour on its own without being refreshed
 
 
 ## Acknowledgements
-Give credit here.
-- This project was inspired by...
-- This project was based on [this tutorial](https://www.example.com).
-- Many thanks to...
+Many thanks to my instuctor, Michael Pacheco, the TAs, Nirav Venkatesan and Julius Dorfman, and tutor, Dane Shrewsbury. Also, to all the Ask BCS people that helped me!
 
 
 ## Contact
-Created by [@flynerdpl](https://www.flynerd.pl/) - feel free to contact me!
+Created by Kristine Kim.  Feel free to email me at kristinehkim@gmail.com. 
 
 
 <!-- Optional -->
