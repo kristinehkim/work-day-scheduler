@@ -45,8 +45,6 @@ Project is: _in progress_
 
 
 ## Room for Improvement
-Include areas you believe need improvement / could be improved. Also add TODOs for future development.
-
 Room for improvement:
 - To update color coded blocks by the hour on its own without being refreshed
 
