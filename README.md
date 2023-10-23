@@ -1,5 +1,5 @@
 # Work Day Scheduler
-> This is a simple daily calendar application that allows users to save events for each hour of the day.
+> Life can get chaotic for everyone! This is a simple daily calendar application that allows users to save events for each hour of the day.
 > Live demo [_here_](https://kristinehkim.github.io/work-day-scheduler/). <!-- If you have the project hosted somewhere, include the link here. -->
 
 ## Table of Contents
